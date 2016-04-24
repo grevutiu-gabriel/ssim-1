@@ -78,6 +78,10 @@ function [mssim, ssim_map] = ssim(img1_filename, img2_filename, K, window, L)
 img1 = imread(img1_filename);
 img2 = imread(img2_filename);
 
+format long
+output_precision(7)
+pkg load image
+
 
 if (nargin < 2 || nargin > 5)
    mssim = -Inf;
